@@ -1,5 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+[System.Serializable]
+
+
+public class Boundary
+{
+    public float xMin, xMax, zMin, zMax;
+}
 
 public class CharacterShip : MonoBehaviour
 {
@@ -34,15 +41,28 @@ public class CharacterShip : MonoBehaviour
     public float tiltAngle;
     public float moveSpeed;
     public GameObject Mainship = null;
+    public Rigidbody rb;
+    public Boundary boundary;
+
 
     public static CharacterShip Player;
 
     // Use this for initialization
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+
+
     void Awake()
     {
         Player = this;
         
     }
+
+
 
     public void FixedUpdate()
     {
@@ -80,7 +100,20 @@ public class CharacterShip : MonoBehaviour
         {
             StartCoroutine(StartDodge());
         }
-            
+
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        rb.velocity = movement * speed;
+
+        rb.position = new Vector3
+         (
+          Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax),
+          0.0f,
+          Mathf.Clamp(rb.position.z, boundary.zMin, boundary.zMax)
+          );
+
 
     }
 
@@ -149,6 +182,7 @@ public class CharacterShip : MonoBehaviour
       
 
     }
+
 
 
 }
