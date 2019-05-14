@@ -1,0 +1,49 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Scarabhoming : MonoBehaviour
+{
+    [SerializeField] public Transform targetPlayer;
+    [SerializeField] public float force;
+    [SerializeField] public float rotationForce;
+    [SerializeField] public float secondsBeforeHoming;
+    [SerializeField] public float launchForce;
+    public bool shouldFollow;
+    public Rigidbody rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        StartCoroutine(WaitBeforeHoming());
+    }
+
+    private void FixedUpdate()
+    {
+        if (shouldFollow)
+        {
+            if (targetPlayer != null)
+            {
+                Vector3 direction = targetPlayer.position - rb.position;
+                direction.Normalize();
+                Vector3 rotationAmount = Vector3.Cross(transform.forward, direction);
+                rb.angularVelocity = rotationAmount * rotationForce;
+                rb.velocity = transform.forward * force;
+            }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Destroy(collision.collider.gameObject);
+        Destroy(gameObject);
+    }
+
+    private IEnumerator WaitBeforeHoming()
+    {
+        rb.AddForce(Vector3.up * launchForce, ForceMode.Impulse);
+        yield return new WaitForSeconds(secondsBeforeHoming);
+        shouldFollow = true;
+    }
+
+}
