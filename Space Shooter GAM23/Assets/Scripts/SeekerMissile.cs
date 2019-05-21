@@ -6,6 +6,7 @@ public class SeekerMissile : MonoBehaviour
     public string searchTag;
     public GameObject closetMissle;
     public Transform target;
+    public GameObject Explosion;
 
     void Start()
     {
@@ -20,7 +21,7 @@ public class SeekerMissile : MonoBehaviour
     void Update()
     {
         transform.LookAt(target);
-        transform.Translate(Vector3.forward * 100.0f * Time.deltaTime);
+        transform.Translate(Vector3.forward * 300.0f * Time.deltaTime);
     }
 
     GameObject FindClosestEnemy()
@@ -47,23 +48,17 @@ public class SeekerMissile : MonoBehaviour
 
         return closest;
     }
-   
 
-    void OnTriggerEnter(Collider other)
+
+    private void OnCollisionEnter(Collision collision)
     {
-        // if (other.gameObject.GetComponent<SpaceRock>())
-        //{
-        //Destroy(other.gameObject);
-        //}
-        // else if (other.gameObject.GetComponent<SpaceRock>())
-        //{
-        //other.gameObject.GetComponent<jsdjsj>().TakeDamage(damage);
-        //}
-        // Destroy(gameObject);
-        {
-            Destroy(gameObject);
-        }
+        Instantiate(Explosion, transform.position, transform.rotation);
+
+        Destroy(gameObject);
+
+        Destroy(collision.gameObject);
     }
+
 
     IEnumerator WaitAndDestroy()
     {

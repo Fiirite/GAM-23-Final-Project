@@ -119,8 +119,13 @@ public class CharacterShip : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject);
+        //Debug.Log("OnCollisionEnter: " + collision.gameObject.name);
+
         Instantiate(Explosion, transform.position, transform.rotation);
+
+        Destroy(gameObject);
+
+        Destroy(collision.gameObject);
     }
 
     public void HandleFire()
@@ -175,7 +180,7 @@ public class CharacterShip : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         animator.enabled = false;
         Dodge.SetActive(false);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         canDodge = true;
 
 

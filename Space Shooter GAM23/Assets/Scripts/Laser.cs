@@ -4,8 +4,10 @@ using System.Collections;
 public class Laser : MonoBehaviour
 {
     public float speed = 10.0f;
-	// Use this for initialization
-	void Start ()
+
+    public GameObject Explosion;
+    // Use this for initialization
+    void Start ()
     {
         StartCoroutine(WaitAndDestroy());
     }
@@ -15,9 +17,13 @@ public class Laser : MonoBehaviour
     {
         transform.position = transform.position + Vector3.forward * Time.deltaTime * speed;
     }
-    void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
+        Instantiate(Explosion, transform.position, transform.rotation);
+
         Destroy(gameObject);
+
+        Destroy(collision.gameObject);
     }
 
     IEnumerator WaitAndDestroy()
