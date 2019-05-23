@@ -24,8 +24,9 @@ public class WeaponController : MonoBehaviour
         if (onRange)
         {
 
-            Rigidbody bullet = (Rigidbody)Instantiate(projectile, transform.position + transform.forward, transform.rotation);
-            bullet.AddForce(transform.forward * bulletImpulse, ForceMode.Impulse);
+            Rigidbody bullet = (Rigidbody)Instantiate(projectile, transform.position, transform.rotation);
+
+            //bullet.AddForce(new Vector3(0,0,1f) * bulletImpulse, ForceMode.Impulse);
 
             Destroy(bullet.gameObject, 2);
         }
@@ -38,9 +39,7 @@ public class WeaponController : MonoBehaviour
 
         onRange = Vector3.Distance(transform.position, player.position) < range;
 
-        if (onRange)
-            transform.LookAt(player);
+       // if (onRange)
+       //     transform.LookAt(player);
     }
-
-
 }
