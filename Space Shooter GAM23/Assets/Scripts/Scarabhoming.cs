@@ -13,10 +13,23 @@ public class Scarabhoming : MonoBehaviour
     public Rigidbody rb;
     public GameObject Explosion;
 
+    
+
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         StartCoroutine(WaitBeforeHoming());
+    }
+    void OnDestroy()
+    {
+        int score = PlayerPrefs.GetInt("Score", 0);
+
+        score += 20;
+
+        PlayerPrefs.SetInt("Score", score);
+
+        Instantiate(Explosion, transform.position, transform.rotation);
     }
 
     private void Update()
@@ -38,19 +51,6 @@ public class Scarabhoming : MonoBehaviour
         }
        
     }
-    void OnTriggerEnter(Collider other)
-    {
-        Destroy(gameObject);
-        Instantiate(Explosion, transform.position, transform.rotation);
-        
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        Instantiate(Explosion, transform.position, transform.rotation);
-        Destroy(gameObject);
-    } 
-  
 
     private IEnumerator WaitBeforeHoming()
     {

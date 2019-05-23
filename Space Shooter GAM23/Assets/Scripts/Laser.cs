@@ -19,7 +19,11 @@ public class Laser : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Laser: OnCollisionEnter");
+
         Instantiate(Explosion, transform.position, transform.rotation);
+
+        collision.gameObject.SendMessage("addScore");
 
         Destroy(gameObject);
 
