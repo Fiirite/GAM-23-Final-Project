@@ -20,6 +20,5 @@ public class EnemyLaserSpawner : MonoBehaviour
     }
     void Update()
     {
-        transform.Rotate(0, 10f * Time.deltaTime, 0);
     }
 }
