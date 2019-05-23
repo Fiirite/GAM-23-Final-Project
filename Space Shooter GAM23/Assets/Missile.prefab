@@ -226,7 +226,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139198}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.00001
@@ -4959,3 +4959,4 @@ MonoBehaviour:
   searchTag: Enemy
   closetMissle: {fileID: 0}
   target: {fileID: 0}
+  Explosion: {fileID: 173746, guid: 9c2972f1a54097245af3f7f471e5ea8a, type: 2}

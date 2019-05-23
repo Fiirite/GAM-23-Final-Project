@@ -63,6 +63,13 @@ public class CharacterShip : MonoBehaviour
     }
 
 
+    void OnDestroy()
+    {
+        Debug.Log("OnDestroy1");
+
+        FindObjectOfType<GameManager>().SendMessage("PlayerDied");
+    }
+
 
     public void FixedUpdate()
     {
