@@ -1,21 +1,21 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class Laser : MonoBehaviour
-{
+public class EnemyLaser : MonoBehaviour {
     public float speed = 10.0f;
 
     public GameObject Explosion;
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         StartCoroutine(WaitAndDestroy());
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
-        transform.position = transform.position + Vector3.forward * Time.deltaTime * speed;
+        transform.position = transform.position + Vector3.back * Time.deltaTime * speed;
     }
     private void OnCollisionEnter(Collision collision)
     {

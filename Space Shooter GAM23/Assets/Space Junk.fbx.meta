@@ -1,0 +1,164 @@
+fileFormatVersion: 2
+guid: 10f2f32db0452b844b449fb4ecc912c8
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Gyroscope
+    100002: Junk_Attachment_1
+    100004: Junk_Attachment_2
+    100006: Junk_Attachment_3
+    100008: Junk_Attachment_4
+    100010: Rama
+    100012: Rock_1
+    100014: Rock_2
+    100016: Rock_3
+    100018: //RootNode
+    100020: Space_Junktion
+    100022: Space_Mine
+    100024: Space_Platform
+    100026: Space_Ship
+    100028: Space_Station_1
+    100030: Space_Straight
+    400000: Gyroscope
+    400002: Junk_Attachment_1
+    400004: Junk_Attachment_2
+    400006: Junk_Attachment_3
+    400008: Junk_Attachment_4
+    400010: Rama
+    400012: Rock_1
+    400014: Rock_2
+    400016: Rock_3
+    400018: //RootNode
+    400020: Space_Junktion
+    400022: Space_Mine
+    400024: Space_Platform
+    400026: Space_Ship
+    400028: Space_Station_1
+    400030: Space_Straight
+    2100000: lambert1
+    2300000: Gyroscope
+    2300002: Junk_Attachment_1
+    2300004: Junk_Attachment_2
+    2300006: Junk_Attachment_3
+    2300008: Junk_Attachment_4
+    2300010: Rama
+    2300012: Rock_1
+    2300014: Rock_2
+    2300016: Rock_3
+    2300018: Space_Junktion
+    2300020: Space_Mine
+    2300022: Space_Platform
+    2300024: Space_Ship
+    2300026: Space_Station_1
+    2300028: Space_Straight
+    3300000: Gyroscope
+    3300002: Junk_Attachment_1
+    3300004: Junk_Attachment_2
+    3300006: Junk_Attachment_3
+    3300008: Junk_Attachment_4
+    3300010: Rama
+    3300012: Rock_1
+    3300014: Rock_2
+    3300016: Rock_3
+    3300018: Space_Junktion
+    3300020: Space_Mine
+    3300022: Space_Platform
+    3300024: Space_Ship
+    3300026: Space_Station_1
+    3300028: Space_Straight
+    4300000: Rock_1
+    4300002: Rock_2
+    4300004: Rama
+    4300006: Space_Station_1
+    4300008: Space_Platform
+    4300010: Junk_Attachment_1
+    4300012: Junk_Attachment_2
+    4300014: Junk_Attachment_3
+    4300016: Space_Junktion
+    4300018: Space_Straight
+    4300020: Gyroscope
+    4300022: Rock_3
+    4300024: Space_Mine
+    4300026: Space_Ship
+    4300028: Junk_Attachment_4
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

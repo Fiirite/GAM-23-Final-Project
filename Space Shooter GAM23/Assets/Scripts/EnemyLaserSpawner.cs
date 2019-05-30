@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyLaserSpawner : MonoBehaviour
 {
-    public Laser weapon;
+    public EnemyLaser weapon;
 
     void Start()
     {
@@ -14,7 +14,7 @@ public class EnemyLaserSpawner : MonoBehaviour
     {
         Debug.Log("forward: " + transform.forward);
 
-        Laser go = Instantiate(weapon, transform.position, transform.rotation);
+        EnemyLaser go = Instantiate(weapon, transform.position, transform.rotation);
 
         Destroy(go.gameObject, 5f);
     }
